@@ -1,4 +1,5 @@
-const htmlparser = require('htmlparser');
+// const htmlparser = require('htmlparser');
+const DomParser = require('react-native-html-parser').DOMParser;
 const axios = require('axios');
 
 /**
@@ -15,22 +16,11 @@ exports.getItemImage = (appid, name, callback) => {
 
     axios.get(`http://steamcommunity.com/market/listings/${appid}/${name}`)
       .then((response) => {
-        const handler = new htmlparser.DefaultHandler((error, dom) => {
-          if (error) {
-            callback(null, error);
-          } else {
-            const img = dom[2].children[3].children[1].children[13].children[5].children[9].children[3].children[1].children[1].attribs.src;
-            const r = {
-              imageUrl: img
-            };
-            callback(r);
-          }
+        var doc = new DomParser().parseFromString(response.data, 'text/html');
+        var d = doc.getElementById('mypurchase_0_image');
+        callback({
+          imgUrl: d.attributes[1].nodeValue
         });
-        const parser = new htmlparser.Parser(handler);
-        parser.parseComplete(response.data);
       })
-      .catch((err) => {
-        console.log(err);
-        callback(null, err);
-      });
+      .catch(err => callback(null, err));
 };

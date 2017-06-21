@@ -1,6 +1,6 @@
 {
   "name": "steam-market-image-fetcher",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Fetches images for steam items from the steam marketplace.",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.16.2",
-    "htmlparser": "^1.7.7"
+    "react-native-html-parser": "0.0.4"
   },
   "devDependencies": {
     "read-file": "^0.2.0"
