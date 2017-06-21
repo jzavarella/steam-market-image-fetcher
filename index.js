@@ -20,11 +20,17 @@ exports.getItemImage = (appid, name, callback) => {
             callback(null, error);
           } else {
             const img = dom[2].children[3].children[1].children[13].children[5].children[9].children[3].children[1].children[1].attribs.src;
-            callback(img);
+            const r = {
+              imageUrl: img
+            };
+            callback(r);
           }
         });
         const parser = new htmlparser.Parser(handler);
-        parser.parseComplete(response);
+        parser.parseComplete(response.data);
       })
-      .catch(err => callback(null, err));
+      .catch((err) => {
+        console.log(err);
+        callback(null, err);
+      });
 };
