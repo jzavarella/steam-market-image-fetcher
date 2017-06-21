@@ -1,8 +1,9 @@
 {
-  "name": "steam-market-image-fetcher",
+  "name": "steam-market-item-image-fetcher",
   "version": "1.1.0",
   "description": "Fetches images for steam items from the steam marketplace.",
   "main": "index.js",
+  "repository": "https://github.com/jzavarella/steam-market-image-fetcher",
   "scripts": {
     "start": "node index.js",
     "test": "nodemon index.js"
