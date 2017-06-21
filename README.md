@@ -9,13 +9,13 @@ Features:
  * Drag and drop a file into here to load it
  * File contents are saved in the URL so you can share files
 
-### Installation
+## Installation
 
 ```bash
 npm install --save steam-market-image-fetch
 ```
 
-### Usage
+## Usage
 
 ```javascript
 const MarketImage = require('steam-market-image-fetch');
@@ -29,9 +29,9 @@ MarketImage.getItemImage(578080, 'Red Hi-top Trainers', (response, err) => {
 });
 ```
 
-### Methods
+## Methods
 
-##### getItemImage(appid, market_hash_name, callback)
+### getItemImage(appid, market_hash_name, callback)
 
 All fields are required
 * ```appid```: The application id of the steam game the item belongs to (Ex: ```578080``` is the appid for Playerunknown's Battlegrounds) 
