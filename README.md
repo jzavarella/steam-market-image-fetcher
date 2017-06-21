@@ -32,3 +32,10 @@ All fields are required
 * ```callback```: The function called after the request to steam is complete
 	* ```response```: The image url of the requested item
 	* ```err```: If there is an error, this will be passed, null if there is no error
+
+#### Response
+```json
+{
+  "imgUrl": "...the url to the item image..."
+}
+```
