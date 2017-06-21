@@ -9,15 +9,6 @@ Features:
  * Drag and drop a file into here to load it
  * File contents are saved in the URL so you can share files
 
-
-I'm no good at writing sample / filler text, so go write something yourself.
-
-Look, a list!
-
- * foo
- * bar
- * baz
-
 ### Installation
 
 ```bash
@@ -38,15 +29,13 @@ MarketImage.getItemImage(578080, 'Red Hi-top Trainers', (response, err) => {
 });
 ```
 
-This is [on GitHub](https://github.com/jbt/markdown-editor) so let me know if I've b0rked it somewhere.
+### Methods
 
+##### getItemImage(appid, market_hash_name, callback)
 
-Props to Mr. Doob and his [code editor](http://mrdoob.com/projects/code-editor/), from which
-the inspiration to this, and some handy implementation hints, came.
-
-### Stuff used to make this:
-
- * [markdown-it](https://github.com/markdown-it/markdown-it) for Markdown parsing
- * [CodeMirror](http://codemirror.net/) for the awesome syntax-highlighted editor
- * [highlight.js](http://softwaremaniacs.org/soft/highlight/en/) for syntax highlighting in output code blocks
- * [js-deflate](https://github.com/dankogai/js-deflate) for gzipping of data to make it fit in URLs
+All fields are required
+* ```appid```: The application id of the steam game the item belongs to (Ex: ```578080``` is the appid for Playerunknown's Battlegrounds) 
+* ```market_hash_name```: The name of the item you want the image for (Ex: ```Red Hi-top Trainers``` **Case Sensative**)
+* ```callback```: The function called after the request to steam is complete
+	* ```response```: The image url of the requested item
+	* ```err```: If there is an error, this will be passed, null if there is no error
