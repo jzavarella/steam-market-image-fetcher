@@ -17,7 +17,7 @@ exports.getItemImage = (appid, name, callback) => {
       .then((response) => {
         const handler = new htmlparser.DefaultHandler((error, dom) => {
           if (error) {
-            callback(error);
+            callback(null, error);
           } else {
             const img = dom[2].children[3].children[1].children[13].children[5].children[9].children[3].children[1].children[1].attribs.src;
             callback(img);
@@ -26,5 +26,5 @@ exports.getItemImage = (appid, name, callback) => {
         const parser = new htmlparser.Parser(handler);
         parser.parseComplete(response);
       })
-      .catch(err => callback(err));
+      .catch(err => callback(null, err));
 };
