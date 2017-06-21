@@ -1,11 +1,11 @@
-# Steam Market Item Image Fetch
+# Steam Market Item Image Fetcher
 
 This module was created for use in [this app](http://linktoplaystoreeventually) to fetch the image of a steam item.
 
 ## Installation
 
 ```bash
-npm install --save steam-market-image-fetch
+npm install --save steam-market-image-fetcher
 ```
 
 ## Usage
