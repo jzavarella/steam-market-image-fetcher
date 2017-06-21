@@ -5,7 +5,7 @@ This module was created for use in [this app](http://linktoplaystoreeventually) 
 ## Installation
 
 ```bash
-npm install --save steam-market-image-fetcher
+npm install --save steam-market-item-image-fetcher
 ```
 
 ## Usage
