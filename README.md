@@ -11,7 +11,7 @@ npm install --save steam-market-item-image-fetcher
 ## Usage
 
 ```javascript
-const MarketImage = require('steam-market-image-fetch');
+const MarketImage = require('steam-market-item-image-fetch');
 
 MarketImage.getItemImage(578080, 'Red Hi-top Trainers', (response, err) => {
     if (!err) {
