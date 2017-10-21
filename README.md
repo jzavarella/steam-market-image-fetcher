@@ -1,6 +1,6 @@
 # Steam Market Item Image Fetcher
 
-This module was created for use in [this app](http://linktoplaystoreeventually) to fetch the image of a steam item.
+This module was created for use in [this app](https://goo.gl/S3M74L) to fetch the image of a steam item.
 
 ## Installation
 
